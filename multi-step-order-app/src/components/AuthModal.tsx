@@ -9,8 +9,11 @@ interface AuthModalProps {
 
 function AuthModal({ show, onHide, children }: AuthModalProps) {
   return (
-    <Modal show={show} onHide={onHide}>
-      <Modal.Body>{children}</Modal.Body>
+    <Modal show={show} onHide={onHide} centered>
+      <Modal.Body className="d-flex flex-column justify-content-center align-items-center">
+        <h4 className="text-center mb-4">Telecom App</h4>
+        {children}
+      </Modal.Body>
     </Modal>
   );
 }

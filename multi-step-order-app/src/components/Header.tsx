@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { Navbar, Nav, Button, Dropdown } from 'react-bootstrap';
-import AuthModal from './AuthModal'; // Import your AuthModal component here
+import { Nav, Button, Dropdown } from 'react-bootstrap';
+import AuthModal from './AuthModal'
 import LoginForm from './LoginForm';
 import RegisterForm from './RegisterForm';
 
@@ -13,10 +13,11 @@ interface HeaderProps {
 
 function Header({ username, onLogout, onLogin, onRegister }: HeaderProps) {
   const [showAuthModal, setShowAuthModal] = useState(false);
+  const [isLoginFormShown, setIsLoginFormShown] = useState(true);
 
   const handleLogin = async (email: string, password: string) => {
     try {
-      const response = await fetch('/proxy/8000/users/login', {
+      const response = await fetch('https://ide-cdccbbbcebbacdbfaeaaecfbcdbacecdeab.premiumproject.examly.io/proxy/8000/users/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -26,6 +27,7 @@ function Header({ username, onLogout, onLogin, onRegister }: HeaderProps) {
 
       if (response.ok) {
         console.log('Login successful');
+        setShowAuthModal(false);
       } else {
         console.error('Login failed');
       }
@@ -34,18 +36,19 @@ function Header({ username, onLogout, onLogin, onRegister }: HeaderProps) {
     }
   };
 
-  const handleRegister = async (username: string, email: string, password: string) => {
+  const handleRegister = async (email: string, password: string) => {
     try {
-      const response = await fetch('/proxy/8000/users/register', {
+      const response = await fetch('https://ide-cdccbbbcebbacdbfaeaaecfbcdbacecdeab.premiumproject.examly.io/proxy/8000/users/register', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ username, email, password }),
+        body: JSON.stringify({ email, password }),
       });
 
       if (response.ok) {
         console.log('Registration successful');
+        setShowAuthModal(false);
       } else {
         console.error('Registration failed');
       }
@@ -60,6 +63,10 @@ function Header({ username, onLogout, onLogin, onRegister }: HeaderProps) {
 
   const handleAuthModalShow = () => {
     setShowAuthModal(true);
+  };
+
+  const handleSwitchForm = () => {
+    setIsLoginFormShown(!isLoginFormShown);
   };
 
   return (
@@ -86,8 +93,11 @@ function Header({ username, onLogout, onLogin, onRegister }: HeaderProps) {
         </Nav>
       </nav>
       <AuthModal show={showAuthModal} onHide={handleAuthModalClose}>
-        <LoginForm onLogin={handleLogin} onClose={handleAuthModalClose} />
-        <RegisterForm onRegister={handleRegister} onClose={handleAuthModalClose} />
+        {isLoginFormShown ? (
+          <LoginForm onLogin={handleLogin} onClose={handleAuthModalClose} onSwitch={handleSwitchForm} />
+        ) : (
+          <RegisterForm onRegister={handleRegister} onClose={handleAuthModalClose} onSwitch={handleSwitchForm} />
+        )}
       </AuthModal>
     </header>
   );

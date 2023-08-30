@@ -3,24 +3,30 @@ import { Formik, Form, Field, FormikHelpers } from 'formik';
 import { Button, Alert } from 'react-bootstrap';
 
 interface RegisterFormValues {
-  username: string;
   email: string;
   password: string;
+  confirmPassword: string;
 }
 
 interface RegisterFormProps {
-  onRegister: (username: string, email: string, password: string) => void;
+  onRegister: (email: string, password: string) => void;
   onClose: () => void;
+  onSwitch: () => void;
 }
 
-function RegisterForm({ onRegister, onClose }: RegisterFormProps) {
+function RegisterForm({ onRegister, onClose, onSwitch }: RegisterFormProps) {
   const handleRegister = async (
     values: RegisterFormValues,
     actions: FormikHelpers<RegisterFormValues>
   ) => {
     try {
-      await onRegister(values.username, values.email, values.password);
-      onClose(); // Close the modal on successful registration
+      if (values.password !== values.confirmPassword) {
+        actions.setStatus('Passwords do not match');
+        return;
+      }
+
+      await onRegister(values.email, values.password);
+      onClose(); 
     } catch (error) {
       console.error('Error:', error);
     } finally {
@@ -30,18 +36,24 @@ function RegisterForm({ onRegister, onClose }: RegisterFormProps) {
 
   return (
     <Formik
-      initialValues={{ username: '', email: '', password: '' }}
+      initialValues={{ email: '', password: '', confirmPassword: '' }}
       onSubmit={handleRegister}
     >
       {({ isSubmitting, status }) => (
-        <Form>
+        <Form className="p-3">
           {status && <Alert variant="danger">{status}</Alert>}
-          <Field type="text" name="username" placeholder="Username" />
-          <Field type="email" name="email" placeholder="Email" />
-          <Field type="password" name="password" placeholder="Password" />
-          <Button type="submit" disabled={isSubmitting}>
+          <Field type="email" name="email" placeholder="Email" className="form-control mb-3" />
+          <Field type="password" name="password" placeholder="Password" className="form-control mb-3" />
+          <Field type="password" name="confirmPassword" placeholder="Confirm Password" className="form-control mb-3" />
+          <Button type="submit" disabled={isSubmitting} variant="primary" className="w-100 mb-3">
             Register
           </Button>
+          <p className="text-center">
+            Already have an account?{' '}
+            <button type="button" className="btn btn-link" onClick={onSwitch}>
+              Login
+            </button>
+          </p>
         </Form>
       )}
     </Formik>

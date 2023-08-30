@@ -10,16 +10,17 @@ interface LoginFormValues {
 interface LoginFormProps {
   onLogin: (email: string, password: string) => void;
   onClose: () => void;
+  onSwitch: () => void;
 }
 
-function LoginForm({ onLogin, onClose }: LoginFormProps) {
+function LoginForm({ onLogin, onClose, onSwitch }: LoginFormProps) {
   const handleLogin = async (
     values: LoginFormValues,
     actions: FormikHelpers<LoginFormValues>
   ) => {
     try {
       await onLogin(values.email, values.password);
-      onClose(); 
+      onClose();
     } catch (error) {
       console.error('Error:', error);
     } finally {
@@ -30,13 +31,19 @@ function LoginForm({ onLogin, onClose }: LoginFormProps) {
   return (
     <Formik initialValues={{ email: '', password: '' }} onSubmit={handleLogin}>
       {({ isSubmitting, status }) => (
-        <Form>
+        <Form className="p-3">
           {status && <Alert variant="danger">{status}</Alert>}
-          <Field type="email" name="email" placeholder="Email" />
-          <Field type="password" name="password" placeholder="Password" />
-          <Button type="submit" disabled={isSubmitting}>
+          <Field type="email" name="email" placeholder="Email" className="form-control mb-3" />
+          <Field type="password" name="password" placeholder="Password" className="form-control mb-3" />
+          <Button type="submit" disabled={isSubmitting} variant="primary" className="w-100 mb-3">
             Login
           </Button>
+          <p className="text-center">
+            Don't have an account?{' '}
+            <button type="button" className="btn btn-link" onClick={onSwitch}>
+              Register
+            </button>
+          </p>
         </Form>
       )}
     </Formik>

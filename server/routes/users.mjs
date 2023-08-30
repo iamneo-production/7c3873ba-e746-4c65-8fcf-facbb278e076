@@ -1,6 +1,7 @@
 import express from "express";
 import db from "../db/conn.mjs";
 import { ObjectId } from "mongodb";
+import bcrypt from "bcrypt";
 
 const router = express.Router();
 
@@ -107,8 +108,6 @@ router.post('/login', async (req, res) => {
       return res.status(401).json({ message: 'Invalid credentials' });
     }
 
-    // TODO: You can use JWT or sessions for generating tokens here
-    // For simplicity, just sending a success message
     res.status(200).json({ message: 'Login successful', userId: user._id });
   } catch (error) {
     console.error('Error:', error);
