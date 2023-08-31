@@ -46,7 +46,7 @@ export const Header = () => {
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
         <Toolbar
-          style={{ justifyContent: "space-between", background: "#261693" }}
+          style={{ justifyContent: "space-between", background: "#0C356A" }}
         >
           <Box display="flex" flexDirection="row" sx={{ alignItems: "center" }}>
             <TtyIcon style={{ width: 50 }} />

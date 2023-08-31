@@ -154,7 +154,7 @@ export const PackageCard = ({ type, data }) => {
             <Button
               size="large"
               variant="contained"
-              color="primary"
+              style={{ backgroundColor: "#0C356A", color: "white" }}
               onClick={handleOpenModal}
             >
               Get Package
@@ -223,7 +223,7 @@ export const PackageCard = ({ type, data }) => {
           </Button>
           <Button
             onClick={handleCloseModal}
-            color="primary"
+            style={{ backgroundColor: "#0C356A", color: "white" }}
             variant="contained"
             size="large"
           >
