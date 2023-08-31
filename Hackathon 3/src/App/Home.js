@@ -1,10 +1,10 @@
-import React from "react";
-
+import React, { useEffect, useState } from "react";
 import { Header } from "./../CommonComponents/Header";
 import { Box, Tab, Tabs } from "@mui/material";
 import { Typography } from "@mui/material";
 import { DataPlans } from "../CommonComponents/DataPlans";
 import { CallPlans } from "../CommonComponents/CallPlans";
+import { Cart } from "../CommonComponents/Cart";
 import PropTypes from "prop-types";
 
 function CustomTabPanel(props) {
@@ -44,6 +44,20 @@ function a11yProps(index) {
 
 export const Home = () => {
   const [value, setValue] = React.useState(0);
+  const [cartItems, setCartItems] = useState([]); // State to hold cart items
+
+  const handleAddToOrder = (item) => {
+    setCartItems((prevCartItems) => [...prevCartItems, item]);
+  };
+
+  const handleRemoveFromCart = (index) => {
+    const newCartItems = cartItems.filter((_, i) => i !== index);
+    setCartItems(newCartItems);
+  };
+
+  useEffect(() => {
+    console.log(JSON.stringify(cartItems));
+  }, [cartItems]);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -69,13 +83,21 @@ export const Home = () => {
               label="Call Plans"
               {...a11yProps(1)}
             />
+            <Tab
+              sx={{ textTransform: "none", fontWeight: "bold" }}
+              label="Cart"
+              {...a11yProps(2)}
+            />
           </Tabs>
         </Box>
         <CustomTabPanel value={value} index={0}>
-          <DataPlans />
+          <DataPlans addToOrder={handleAddToOrder} />
         </CustomTabPanel>
         <CustomTabPanel value={value} index={1}>
-          <CallPlans />
+          <CallPlans addToOrder={handleAddToOrder} />
+        </CustomTabPanel>
+        <CustomTabPanel value={value} index={2}>
+          <Cart cartItems={cartItems} removeCartItem={handleRemoveFromCart} />
         </CustomTabPanel>
       </Box>
     </div>

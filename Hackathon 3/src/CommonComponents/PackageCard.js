@@ -32,13 +32,6 @@ const Item = styled(Paper)(({ theme }) => ({
   },
 }));
 
-const BulletPoint = styled(Typography)(({ theme }) => ({
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "flex-start",
-  paddingLeft: theme.spacing(1),
-}));
-
 const StyledTitleBox = styled(Box)(({ theme }) => ({
   backgroundColor: "#1E90FF",
   color: "white",
@@ -50,7 +43,7 @@ const StyledTitleBox = styled(Box)(({ theme }) => ({
   justifyContent: "center",
 }));
 
-export const PackageCard = ({ type, data }) => {
+export const PackageCard = ({ type, data, onAddToOrder }) => {
   const [modalOpen, setModalOpen] = useState(false);
   const [selectedOptions, setSelectedOptions] = useState({});
 
@@ -62,6 +55,22 @@ export const PackageCard = ({ type, data }) => {
   };
 
   const handleCloseModal = () => {
+    setModalOpen(false);
+    setSelectedOptions({});
+  };
+
+  const handleAddtoOrder = () => {
+    const itemWithOptions = {
+      data: {
+        id: data.id,
+        title: data.title,
+        basePrice: data.basePrice,
+        customizationOptions: data.customizationOptions,
+      },
+      type: type,
+      customizationOptions: selectedOptions,
+    };
+    onAddToOrder(itemWithOptions);
     setModalOpen(false);
     setSelectedOptions({});
   };
@@ -222,7 +231,7 @@ export const PackageCard = ({ type, data }) => {
             Close
           </Button>
           <Button
-            onClick={handleCloseModal}
+            onClick={handleAddtoOrder}
             style={{ backgroundColor: "#0C356A", color: "white" }}
             variant="contained"
             size="large"

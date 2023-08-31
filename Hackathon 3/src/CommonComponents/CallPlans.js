@@ -4,7 +4,7 @@ import { Box, Grid, Slider, Typography } from "@mui/material";
 import { getAllCallPlans } from "../Services/http.service";
 import { toast } from "react-toastify";
 
-export const CallPlans = () => {
+export const CallPlans = ({ addToOrder }) => {
   const [allCallPlans, setCallPlans] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -63,7 +63,11 @@ export const CallPlans = () => {
                 <>
                   {filteredData.map((data, index) => (
                     <Grid key={index} item xs={12} sm={6} md={4}>
-                      <PackageCard type="call" data={data} />
+                      <PackageCard
+                        type="call"
+                        data={data}
+                        onAddToOrder={addToOrder}
+                      />
                     </Grid>
                   ))}
                 </>
