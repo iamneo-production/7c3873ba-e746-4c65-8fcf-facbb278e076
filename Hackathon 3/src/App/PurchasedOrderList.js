@@ -1,11 +1,16 @@
-import { Box, Typography } from "@mui/material";
-import React from "react";
+import { Typography } from "@mui/material";
+import React, { useEffect, useState } from "react";
 import { Header } from "../CommonComponents/Header";
-
-import { DataGrid } from "@mui/x-data-grid";
 import DataGridCustomToolbar from "../CommonComponents/DataGridCustomToolbar";
+import { getCheckoutHistory } from "../Services/http.service";
+import { DataGrid } from "@mui/x-data-grid";
 
 const columns = [
+  {
+    field: "id",
+    headerName: "Order ID",
+    width: 150,
+  },
   {
     field: "customername",
     headerName: (
@@ -33,41 +38,53 @@ const columns = [
     ),
     width: 130,
   },
-];
-
-const rows = [
   {
-    id: 1,
-    customername: "chamupathi saranga",
-    purchasedplan: "Data Plan",
-    date: "2023.08.31",
-  },
-  {
-    id: 2,
-    customername: "Minidu",
-    purchasedplan: "Call Plan",
-    date: "2023.08.30",
+    field: "total",
+    headerName: (
+      <Typography variant="subtitle2" fontWeight="bold">
+        Total Amount
+      </Typography>
+    ),
+    width: 130,
   },
 ];
 
 export const PurchasedOrderList = () => {
+  const [orderHistory, setOrderHistory] = useState([]);
+
+  useEffect(() => {
+    const user = sessionStorage.getItem("email");
+    getCheckoutHistory(user)
+      .then((response) => {
+        setOrderHistory(response.data);
+      })
+      .catch((error) => {
+        console.error("Error fetching order history:", error);
+      });
+  }, []);
+
+  const formattedOrderHistory = orderHistory.map((order) => ({
+    id: order.id,
+    customername: order.user,
+    purchasedplan: order.items.map((item) => item.data.title).join(", "),
+    date: order.timestamp, // Assuming there is a timestamp in the data
+    total: order.total,
+  }));
+
   return (
-    <div style={{ height: 400, width: "100%" }}>
-      <Header />
-      <DataGrid
-        sx={{ marginTop: 2 }}
-        rows={rows}
-        components={{
-          Toolbar: DataGridCustomToolbar,
-        }}
-        columns={columns}
-        initialState={{
-          pagination: {
-            paginationModel: { page: 0, pageSize: 5 },
-          },
-        }}
-        pageSizeOptions={[5, 10]}
-      />
-    </div>
+    <DataGrid
+      sx={{ marginTop: 2 }}
+      rows={formattedOrderHistory}
+      components={{
+        Toolbar: DataGridCustomToolbar,
+      }}
+      columns={columns}
+      initialState={{
+        pagination: {
+          paginationModel: { page: 0, pageSize: 5 },
+        },
+      }}
+      pageSizeOptions={[5, 10]}
+    />
   );
 };

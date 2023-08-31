@@ -6,6 +6,7 @@ import { DataPlans } from "../CommonComponents/DataPlans";
 import { CallPlans } from "../CommonComponents/CallPlans";
 import { Cart } from "../CommonComponents/Cart";
 import PropTypes from "prop-types";
+import { PurchasedOrderList } from "./PurchasedOrderList";
 
 function CustomTabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -92,6 +93,11 @@ export const Home = () => {
               label="Order"
               {...a11yProps(2)}
             />
+            <Tab
+              sx={{ textTransform: "none", fontWeight: "bold" }}
+              label="My Order History"
+              {...a11yProps(3)}
+            />
           </Tabs>
         </Box>
         <CustomTabPanel value={value} index={0}>
@@ -106,6 +112,9 @@ export const Home = () => {
             removeCartItem={handleRemoveFromCart}
             clearCartItems={handleClearCart}
           />
+        </CustomTabPanel>
+        <CustomTabPanel value={value} index={3}>
+          <PurchasedOrderList />
         </CustomTabPanel>
       </Box>
     </div>

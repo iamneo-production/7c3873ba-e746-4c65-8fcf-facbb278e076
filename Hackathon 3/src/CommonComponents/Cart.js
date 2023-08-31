@@ -32,6 +32,7 @@ export const Cart = ({ cartItems, removeCartItem, clearCartItems }) => {
           );
         return total + itemTotal;
       }, 0),
+      timestamp: new Date().toISOString(),
     };
 
     postCheckoutData(checkoutData)
