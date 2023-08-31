@@ -7,27 +7,22 @@ import IconButton from "@mui/material/IconButton";
 import MenuItem from "@mui/material/MenuItem";
 import Menu from "@mui/material/Menu";
 import LogoutIcon from "@mui/icons-material/Logout";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
-import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
-import { Button, Tooltip, useMediaQuery } from "@mui/material";
+import { useMediaQuery } from "@mui/material";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
 
 import TtyIcon from "@mui/icons-material/Tty";
 
 export const Header = () => {
-  const [auth, setAuth] = React.useState(true);
-  const [anchorEl, setAnchorEl] = React.useState(null);
+  // const [auth, setAuth] = React.useState(true);
+  // const [anchorEl, setAnchorEl] = React.useState(null);
   const user = sessionStorage.getItem("email");
   const navigate = useNavigate();
   const isNonMobile = useMediaQuery("(min-width:640px)");
 
-  const handleMenu = (event) => {
-    setAnchorEl(event.currentTarget);
-  };
-
   const handleClose = () => {
-    setAnchorEl(null);
+    // setAnchorEl(null);
     sessionStorage.clear();
     toast.success("Successfully Logout ", {
       theme: "colored",

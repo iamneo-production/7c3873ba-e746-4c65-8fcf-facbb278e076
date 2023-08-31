@@ -4,6 +4,10 @@ export const CheckLogin = (email) => {
   return http.get(`/user/${email}`);
 };
 
+export const addUser = (user) => {
+  return http.post("/user", user);
+};
+
 export const getAllDataPlans = () => {
   return http.get(`/datapack`);
 };
