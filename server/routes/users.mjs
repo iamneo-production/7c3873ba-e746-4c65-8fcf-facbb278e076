@@ -58,7 +58,7 @@ router.delete("/:id", async (req, res) => {
 
 router.post('/register', async (req, res) => {
   try {
-    const { username, email, password } = req.body;
+    const { email, password } = req.body;
 
     const existingUser = await db.collection('users').findOne({ email });
     if (existingUser) {
@@ -67,7 +67,6 @@ router.post('/register', async (req, res) => {
     const hashedPassword = await bcrypt.hash(password, 10);
 
     const newUser = {
-      username,
       email,
       password: hashedPassword,
     };
