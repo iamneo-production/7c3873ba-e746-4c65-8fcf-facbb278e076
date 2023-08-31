@@ -166,38 +166,63 @@
   "callpack": [
     {
       "id": 1,
-      "title": "Any Network Unlimited Calls",
-      "price": "545",
-      "subtitle": "2GB free",
-      "days": "30"
+      "title": "Basic Calls",
+      "basePrice": 300.0,
+      "days": 30,
+      "customizationOptions": [
+        {
+          "id": 1,
+          "name": "Call Minutes",
+          "options": [
+            { "label": "100 Minutes", "value": "100min", "price": 0 },
+            { "label": "250 Minutes", "value": "250min", "price": 50 },
+            { "label": "Unlimited", "value": "unlimited", "price": 100 }
+          ]
+        },
+        {
+          "id": 2,
+          "name": "International Calls",
+          "options": [
+            { "label": "Not Included", "value": "not-included", "price": 0 },
+            { "label": "Included", "value": "included", "price": 75 }
+          ]
+        }
+      ],
+      "additionalInfo": [
+        "New Connection at Rs.500/-",
+        "Free Voicemail Service",
+        "Order now and get a free SIM card"
+      ]
     },
     {
       "id": 2,
-      "title": "Any Network Unlimited Calls",
-      "price": "179",
-      "subtitle": "500MB free",
-      "days": "7"
-    },
-    {
-      "id": 3,
-      "title": "Any Network Unlimted Call",
-      "price": "875",
-      "subtitle": "4GB free",
-      "days": "60"
-    },
-    {
-      "id": 4,
-      "title": "Big Talk With Friends Call",
-      "price": "21",
-      "subtitle": "",
-      "days": "1"
-    },
-    {
-      "id": 5,
-      "title": "Unlimited H-H Call and SMS",
-      "price": "409",
-      "subtitle": "",
-      "days": "30"
+      "title": "Lite Calls",
+      "basePrice": 500.0,
+      "days": 30,
+      "customizationOptions": [
+        {
+          "id": 1,
+          "name": "Call Minutes",
+          "options": [
+            { "label": "100 Minutes", "value": "100min", "price": 0 },
+            { "label": "250 Minutes", "value": "250min", "price": 50 },
+            { "label": "Unlimited", "value": "unlimited", "price": 100 }
+          ]
+        },
+        {
+          "id": 2,
+          "name": "International Calls",
+          "options": [
+            { "label": "Not Included", "value": "not-included", "price": 0 },
+            { "label": "Included", "value": "included", "price": 75 }
+          ]
+        }
+      ],
+      "additionalInfo": [
+        "New Connection at Rs.500/-",
+        "Free Voicemail Service",
+        "Order now and get a free SIM card"
+      ]
     }
   ]
 }

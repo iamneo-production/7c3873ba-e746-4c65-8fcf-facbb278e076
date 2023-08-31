@@ -1,17 +1,17 @@
-import { Box, Grid, Slider, Typography } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import { PackageCard } from "./PackageCard";
+import { Box, Grid, Slider, Typography } from "@mui/material";
 import { getAllCallPlans } from "../Services/http.service";
 import { toast } from "react-toastify";
 
 export const CallPlans = () => {
-  const [allDatapacks, setDataPacks] = useState([]);
+  const [allCallPlans, setCallPlans] = useState([]);
   const [loading, setLoading] = useState(true);
 
   const LoadData = () => {
     getAllCallPlans()
       .then((data) => {
-        setDataPacks(data.data);
+        setCallPlans(data.data);
         setLoading(false);
       })
       .catch((error) => {
@@ -21,57 +21,71 @@ export const CallPlans = () => {
         setLoading(false);
       });
   };
+
   useEffect(() => {
     LoadData();
   }, []);
-  function valuetext(value) {
-    return `${value} GB`;
-  }
-  const [filter, setFilter] = useState("");
 
-  const filterdData = allDatapacks.filter((item) => {
-    return item.days == filter ? item.days : filter == 0 && allDatapacks;
+  function valuetext(value) {
+    return `Rs. ${value}`;
+  }
+
+  const [filter, setFilter] = useState(0);
+
+  const filteredData = allCallPlans.filter((item) => {
+    return item.basePrice >= filter || filter === 0;
   });
 
   return (
-    <>
-      <Box sx={{ width: 300 }}>
+    <Box>
+      <Box sx={{ width: "100%", maxWidth: 300, margin: "auto" }}>
         <Typography variant="subtitle1" fontWeight="bold">
-          Date Range
+          Base Price Range
         </Typography>
         <Slider
-          onChange={(value) => setFilter(value.target.value)}
+          value={filter}
+          onChange={(event, value) => setFilter(value)}
           aria-label="Small steps"
           defaultValue={0}
           getAriaValueText={valuetext}
-          step={10}
+          step={100}
           marks
           min={0}
-          max={60}
+          max={1000}
           valueLabelDisplay="auto"
         />
       </Box>
-      <Grid container>
-        {!loading ? (
-          <>
-            {filterdData.length >= 1 ? (
-              <>
-                {filterdData.map((data) => {
-                  return (
-                    <Grid item xs={6} sm={4} md={2}>
+      <Box display="flex" justifyContent="center">
+        <Grid container spacing={2}>
+          {!loading ? (
+            <>
+              {filteredData.length >= 1 ? (
+                <>
+                  {filteredData.map((data, index) => (
+                    <Grid key={index} item xs={12} sm={6} md={4}>
                       <PackageCard type="call" data={data} />
                     </Grid>
-                  );
-                })}
-              </>
-            ) : (
-              <>No Packages available</>
-            )}
-          </>
-        ) : (
-          <div>Loading</div>
-        )}
-      </Grid>
-    </>
+                  ))}
+                </>
+              ) : (
+                <Box
+                  display="flex"
+                  alignItems="center"
+                  justifyContent="center"
+                  width="100%"
+                  height="200px"
+                  fontSize="20px"
+                  fontWeight="bold"
+                >
+                  No Packages available
+                </Box>
+              )}
+            </>
+          ) : (
+            <div>Loading</div>
+          )}
+        </Grid>
+      </Box>
+    </Box>
   );
 };
