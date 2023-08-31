@@ -1,0 +1,89 @@
+{
+  "user": [
+    {
+      "id": "chamu@gmail.com",
+      "password": "12345678"
+    }
+  ],
+  "datapack": [
+    {
+      "id": 1,
+      "title": "10GB",
+      "price": "200.00",
+      "days": "7"
+    },
+    {
+      "id": 2,
+      "title": "20GB",
+      "price": "400.00",
+      "days": "14"
+    },
+    {
+      "id": 3,
+      "title": "30GB",
+      "price": "600.00",
+      "days": "30"
+    },
+    {
+      "id": 4,
+      "title": "40GB",
+      "price": "600.00",
+      "days": "14"
+    },
+    {
+      "id": 5,
+      "title": "50GB",
+      "price": "700.00",
+      "days": "30"
+    },
+    {
+      "id": 6,
+      "title": "60GB",
+      "price": "800",
+      "days": "30"
+    },
+    {
+      "id": 8,
+      "title": "40GB",
+      "price": "900.00",
+      "days": "30"
+    }
+  ],
+  "callpack": [
+    {
+      "id": 1,
+      "title": "Any Network Unlimited Calls",
+      "price": "545",
+      "subtitle": "2GB free",
+      "days": "30"
+    },
+    {
+      "id": 2,
+      "title": "Any Network Unlimited Calls",
+      "price": "179",
+      "subtitle": "500MB free",
+      "days": "7"
+    },
+    {
+      "id": 3,
+      "title": "Any Network Unlimted Call and SMS",
+      "price": "875",
+      "subtitle": "4GB free",
+      "days": "60"
+    },
+    {
+      "id": 4,
+      "title": "Big talk with fiends (Call and SMS)",
+      "price": "21",
+      "subtitle": "",
+      "days": "1"
+    },
+    {
+      "id": 5,
+      "title": "Unlimited H-H Call and SMS",
+      "price": "409",
+      "subtitle": "",
+      "days": "30"
+    }
+  ]
+}
