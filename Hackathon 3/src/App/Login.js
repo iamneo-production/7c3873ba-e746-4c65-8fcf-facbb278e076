@@ -1,23 +1,17 @@
 import * as React from "react";
-import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
-import CssBaseline from "@mui/material/CssBaseline";
 import TextField from "@mui/material/TextField";
 
 import Box from "@mui/material/Box";
-import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
-import { createTheme, ThemeProvider } from "@mui/material/styles";
-import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
 import { Form, Formik, useFormik } from "formik";
 import { toast } from "react-toastify";
 
 import * as Yup from "yup";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { CheckLogin } from "./../Services/http.service";
-import { Card, useMediaQuery } from "@mui/material";
-import DialpadIcon from "@mui/icons-material/Dialpad";
+import { useMediaQuery } from "@mui/material";
 
 import TtyIcon from "@mui/icons-material/Tty";
 
@@ -49,7 +43,7 @@ export const Login = () => {
         // toast.warn(err.message, {
         //   theme: "colored",
         // });
-        toast.warn("Error in service", {
+        toast.warn("Invalid Credentials", {
           theme: "colored",
         });
       });
@@ -155,6 +149,18 @@ export const Login = () => {
                 </Button>
               </Form>
             </Formik>
+            <Typography
+              variant="body2"
+              sx={{ textAlign: "center", marginTop: 2 }}
+            >
+              Don't have an account?{" "}
+              <Link
+                to="/register"
+                style={{ color: "green", fontWeight: "bold" }}
+              >
+                Sign up here
+              </Link>
+            </Typography>
           </Box>
         </Box>
       </Container>

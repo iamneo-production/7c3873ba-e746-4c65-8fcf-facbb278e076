@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import {
   Box,
   Button,
-  Paper,
   Typography,
   styled,
   Dialog,
@@ -17,20 +16,6 @@ import {
 } from "@mui/material";
 import FourGMobiledataIcon from "@mui/icons-material/FourGMobiledata";
 import DialpadIcon from "@mui/icons-material/Dialpad";
-
-const Item = styled(Paper)(({ theme }) => ({
-  backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
-  ...theme.typography.body2,
-  padding: theme.spacing(2),
-  textAlign: "center",
-  marginTop: 10,
-  borderRadius: 8,
-  color: theme.palette.text.secondary,
-  ":hover": {
-    transform: "scale(1.04)",
-    cursor: "pointer",
-  },
-}));
 
 const StyledTitleBox = styled(Box)(({ theme }) => ({
   backgroundColor: "#094087",

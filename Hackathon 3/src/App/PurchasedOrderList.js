@@ -1,6 +1,5 @@
 import { Typography } from "@mui/material";
 import React, { useEffect, useState } from "react";
-import { Header } from "../CommonComponents/Header";
 import DataGridCustomToolbar from "../CommonComponents/DataGridCustomToolbar";
 import { getCheckoutHistory } from "../Services/http.service";
 import { DataGrid } from "@mui/x-data-grid";
