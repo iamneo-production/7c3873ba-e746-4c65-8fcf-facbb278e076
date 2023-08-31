@@ -33,7 +33,11 @@ export const PackageCard = ({ type, data }) => {
             variant="body1"
             style={{ fontWeight: "bold", color: "teal" }}
           >
-            {type == "data" ? <>{data?.title} Package </> : <>{data?.title} </>}
+            {type == "data" ? (
+              <>{data?.title}GB Package </>
+            ) : (
+              <>{data?.title} </>
+            )}
           </Typography>
           {type == "data" ? (
             <Box>

@@ -8,43 +8,43 @@
   "datapack": [
     {
       "id": 1,
-      "title": "10GB",
+      "title": "10",
       "price": "200.00",
       "days": "7"
     },
     {
       "id": 2,
-      "title": "20GB",
+      "title": "20",
       "price": "400.00",
       "days": "14"
     },
     {
       "id": 3,
-      "title": "30GB",
+      "title": "30",
       "price": "600.00",
       "days": "30"
     },
     {
       "id": 4,
-      "title": "40GB",
+      "title": "40",
       "price": "600.00",
       "days": "14"
     },
     {
       "id": 5,
-      "title": "50GB",
+      "title": "50",
       "price": "700.00",
       "days": "30"
     },
     {
       "id": 6,
-      "title": "60GB",
+      "title": "60",
       "price": "800",
       "days": "30"
     },
     {
       "id": 8,
-      "title": "40GB",
+      "title": "40",
       "price": "900.00",
       "days": "30"
     }
@@ -66,14 +66,14 @@
     },
     {
       "id": 3,
-      "title": "Any Network Unlimted Call and SMS",
+      "title": "Any Network Unlimted Call",
       "price": "875",
       "subtitle": "4GB free",
       "days": "60"
     },
     {
       "id": 4,
-      "title": "Big talk with fiends (Call and SMS)",
+      "title": "Big Talk With Friends Call",
       "price": "21",
       "subtitle": "",
       "days": "1"
