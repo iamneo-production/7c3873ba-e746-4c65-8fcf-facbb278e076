@@ -14,10 +14,14 @@ import { Button, Tooltip, useMediaQuery } from "@mui/material";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
 
 import TtyIcon from "@mui/icons-material/Tty";
+
 export const Header = () => {
   const [auth, setAuth] = React.useState(true);
   const [anchorEl, setAnchorEl] = React.useState(null);
   const user = sessionStorage.getItem("email");
+  const navigate = useNavigate();
+  const isNonMobile = useMediaQuery("(min-width:640px)");
+
   const handleMenu = (event) => {
     setAnchorEl(event.currentTarget);
   };
@@ -30,18 +34,17 @@ export const Header = () => {
     });
     navigate("/");
   };
-  const navigate = useNavigate();
-  const isNonMobile = useMediaQuery("(min-width:640px)");
 
   const [anchorElUser, setAnchorElUser] = React.useState(null);
 
   const handleOpenUserMenu = (event) => {
     setAnchorElUser(event.currentTarget);
   };
+
   const handleCloseUserMenu = () => {
     setAnchorElUser(null);
   };
-  console.log("isNonMobile", isNonMobile);
+
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
@@ -64,19 +67,6 @@ export const Header = () => {
             >
               Telecom Services
             </Typography>
-
-            {/* <Typography textAlign="center"></Typography> */}
-            <Button
-              onClick={() => navigate("/home/purchasedorderlist")}
-              sx={{
-                color: "#fff",
-                textTransform: "none",
-                marginLeft: 5,
-                fontWeight: "bold",
-              }}
-            >
-              Purchased Order List
-            </Button>
           </Box>
           {isNonMobile ? (
             <Box
@@ -131,7 +121,6 @@ export const Header = () => {
                 open={Boolean(anchorElUser)}
                 onClose={handleCloseUserMenu}
               >
-                {/* {settings.map((setting) => ( */}
                 <MenuItem>
                   <Box
                     style={{
@@ -144,22 +133,9 @@ export const Header = () => {
                     <Typography style={{ marginLeft: 4 }}> {user}</Typography>
                   </Box>
                 </MenuItem>
-                <MenuItem
-                  onClick={handleClose}
-                  style={{ display: "flex", justifyContent: "end" }}
-                >
-                  {/* <IconButton
-                    size="large"
-                    aria-label="account of current user"
-                    aria-controls="menu-appbar"
-                    aria-haspopup="true"
-                    onClick={handleClose}
-                    color="inherit"
-                  > */}
+                <MenuItem onClick={handleClose}>
                   <LogoutIcon />
-                  {/* </IconButton> */}
                 </MenuItem>
-                {/* // ))} */}
               </Menu>
             </Box>
           )}
