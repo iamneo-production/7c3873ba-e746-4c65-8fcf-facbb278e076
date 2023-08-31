@@ -15,3 +15,7 @@ export const getAllCallPlans = () => {
 export const postCheckoutData = (checkoutData) => {
   return http.post("/checkoutHistory", checkoutData);
 };
+
+export const getCheckoutHistory = (user) => {
+  return http.get(`/checkoutHistory`, { params: { user } });
+};
