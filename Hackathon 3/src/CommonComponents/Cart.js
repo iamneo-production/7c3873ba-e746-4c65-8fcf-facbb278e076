@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Box,
   List,
@@ -7,10 +7,46 @@ import {
   Typography,
   IconButton,
   Divider,
+  Button,
 } from "@mui/material";
 import DeleteIcon from "@mui/icons-material/Delete";
+import { postCheckoutData } from "../Services/http.service";
 
-export const Cart = ({ cartItems, removeCartItem }) => {
+export const Cart = ({ cartItems, removeCartItem, clearCartItems }) => {
+  const [checkoutInProgress, setCheckoutInProgress] = useState(false);
+
+  const handleCheckout = () => {
+    setCheckoutInProgress(true);
+
+    const user = sessionStorage.getItem("email");
+
+    const checkoutData = {
+      user: user,
+      items: cartItems,
+      total: cartItems.reduce((total, item) => {
+        const itemTotal =
+          item.data.basePrice +
+          Object.values(item.customizationOptions).reduce(
+            (sum, optionPrice) => sum + optionPrice,
+            0
+          );
+        return total + itemTotal;
+      }, 0),
+    };
+
+    postCheckoutData(checkoutData)
+      .then((response) => {
+        console.log("Checkout successful", response.data);
+        clearCartItems();
+      })
+      .catch((error) => {
+        console.error("Checkout error", error);
+      })
+      .finally(() => {
+        setCheckoutInProgress(false);
+      });
+  };
+
   return (
     <Box p={3} boxShadow={2} borderRadius={8} bgcolor="#f8f8f8">
       <Typography variant="h5" fontWeight="bold" mb={2}>
@@ -57,18 +93,34 @@ export const Cart = ({ cartItems, removeCartItem }) => {
           </React.Fragment>
         ))}
       </List>
-      <Typography variant="h6" fontWeight="bold" mt={2}>
-        Total: Rs.{" "}
-        {cartItems.reduce((total, item) => {
-          const itemTotal =
-            item.data.basePrice +
-            Object.values(item.customizationOptions).reduce(
-              (sum, optionPrice) => sum + optionPrice,
-              0
-            );
-          return total + itemTotal;
-        }, 0)}{" "}
-      </Typography>
+      <Box
+        display="flex"
+        justifyContent="space-between"
+        alignItems="center"
+        mt={2}
+      >
+        <Typography variant="h6" fontWeight="bold">
+          Total: Rs.{" "}
+          {cartItems.reduce((total, item) => {
+            const itemTotal =
+              item.data.basePrice +
+              Object.values(item.customizationOptions).reduce(
+                (sum, optionPrice) => sum + optionPrice,
+                0
+              );
+            return total + itemTotal;
+          }, 0)}{" "}
+        </Typography>
+        <Button
+          variant="contained"
+          color="primary"
+          onClick={handleCheckout}
+          disabled={checkoutInProgress || cartItems.length === 0}
+          style={{ backgroundColor: "#0C356A", color: "white" }}
+        >
+          {checkoutInProgress ? "Checking out..." : "Checkout"}
+        </Button>
+      </Box>
     </Box>
   );
 };

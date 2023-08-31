@@ -49,7 +49,7 @@ export const Login = () => {
         // toast.warn(err.message, {
         //   theme: "colored",
         // });
-        toast.warn("Invalid Credentials", {
+        toast.warn("Error in service", {
           theme: "colored",
         });
       });

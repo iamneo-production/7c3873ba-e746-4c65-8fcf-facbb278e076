@@ -9,7 +9,7 @@
     {
       "id": 1,
       "title": "Starter",
-      "basePrice": 1090.0,
+      "basePrice": 1090,
       "quota": 20,
       "days": 30,
       "customizationOptions": [
@@ -17,33 +17,69 @@
           "id": 1,
           "name": "Speed Limit",
           "options": [
-            { "label": "10 Mbps", "value": "10mbps", "price": 0 },
-            { "label": "20 Mbps", "value": "20mbps", "price": 50 },
-            { "label": "50 Mbps", "value": "50mbps", "price": 100 }
+            {
+              "label": "10 Mbps",
+              "value": "10mbps",
+              "price": 0
+            },
+            {
+              "label": "20 Mbps",
+              "value": "20mbps",
+              "price": 50
+            },
+            {
+              "label": "50 Mbps",
+              "value": "50mbps",
+              "price": 100
+            }
           ]
         },
         {
           "id": 2,
           "name": "Add-on Data",
           "options": [
-            { "label": "50 GB", "value": "50gb", "price": 0 },
-            { "label": "100 GB", "value": "100gb", "price": 75 },
-            { "label": "200 GB", "value": "200gb", "price": 150 }
+            {
+              "label": "50 GB",
+              "value": "50gb",
+              "price": 0
+            },
+            {
+              "label": "100 GB",
+              "value": "100gb",
+              "price": 75
+            },
+            {
+              "label": "200 GB",
+              "value": "200gb",
+              "price": 150
+            }
           ]
         },
         {
           "id": 3,
           "name": "Router Upgrade",
           "options": [
-            { "label": "Standard", "value": "standard", "price": 0 },
-            { "label": "High-Performance", "value": "highperf", "price": 100 }
+            {
+              "label": "Standard",
+              "value": "standard",
+              "price": 0
+            },
+            {
+              "label": "High-Performance",
+              "value": "highperf",
+              "price": 100
+            }
           ]
         },
         {
           "id": 4,
           "name": "Installation Type",
           "options": [
-            { "label": "Self-Installation", "value": "self", "price": 0 },
+            {
+              "label": "Self-Installation",
+              "value": "self",
+              "price": 0
+            },
             {
               "label": "Professional Installation",
               "value": "pro",
@@ -61,7 +97,7 @@
     {
       "id": 2,
       "title": "Lite",
-      "basePrice": 1690.0,
+      "basePrice": 1690,
       "quota": 35,
       "days": 30,
       "customizationOptions": [
@@ -69,33 +105,69 @@
           "id": 1,
           "name": "Speed Limit",
           "options": [
-            { "label": "10 Mbps", "value": "10mbps", "price": 0 },
-            { "label": "20 Mbps", "value": "20mbps", "price": 50 },
-            { "label": "50 Mbps", "value": "50mbps", "price": 100 }
+            {
+              "label": "10 Mbps",
+              "value": "10mbps",
+              "price": 0
+            },
+            {
+              "label": "20 Mbps",
+              "value": "20mbps",
+              "price": 50
+            },
+            {
+              "label": "50 Mbps",
+              "value": "50mbps",
+              "price": 100
+            }
           ]
         },
         {
           "id": 2,
           "name": "Add-on Data",
           "options": [
-            { "label": "50 GB", "value": "50gb", "price": 0 },
-            { "label": "100 GB", "value": "100gb", "price": 75 },
-            { "label": "200 GB", "value": "200gb", "price": 150 }
+            {
+              "label": "50 GB",
+              "value": "50gb",
+              "price": 0
+            },
+            {
+              "label": "100 GB",
+              "value": "100gb",
+              "price": 75
+            },
+            {
+              "label": "200 GB",
+              "value": "200gb",
+              "price": 150
+            }
           ]
         },
         {
           "id": 3,
           "name": "Router Upgrade",
           "options": [
-            { "label": "Standard", "value": "standard", "price": 0 },
-            { "label": "High-Performance", "value": "highperf", "price": 100 }
+            {
+              "label": "Standard",
+              "value": "standard",
+              "price": 0
+            },
+            {
+              "label": "High-Performance",
+              "value": "highperf",
+              "price": 100
+            }
           ]
         },
         {
           "id": 4,
           "name": "Installation Type",
           "options": [
-            { "label": "Self-Installation", "value": "self", "price": 0 },
+            {
+              "label": "Self-Installation",
+              "value": "self",
+              "price": 0
+            },
             {
               "label": "Professional Installation",
               "value": "pro",
@@ -113,7 +185,7 @@
     {
       "id": 3,
       "title": "Lite Plus",
-      "basePrice": 3490.0,
+      "basePrice": 3490,
       "quota": 80,
       "days": 30,
       "customizationOptions": [
@@ -121,33 +193,69 @@
           "id": 1,
           "name": "Speed Limit",
           "options": [
-            { "label": "10 Mbps", "value": "10mbps", "price": 0 },
-            { "label": "20 Mbps", "value": "20mbps", "price": 50 },
-            { "label": "50 Mbps", "value": "50mbps", "price": 100 }
+            {
+              "label": "10 Mbps",
+              "value": "10mbps",
+              "price": 0
+            },
+            {
+              "label": "20 Mbps",
+              "value": "20mbps",
+              "price": 50
+            },
+            {
+              "label": "50 Mbps",
+              "value": "50mbps",
+              "price": 100
+            }
           ]
         },
         {
           "id": 2,
           "name": "Add-on Data",
           "options": [
-            { "label": "50 GB", "value": "50gb", "price": 0 },
-            { "label": "100 GB", "value": "100gb", "price": 75 },
-            { "label": "200 GB", "value": "200gb", "price": 150 }
+            {
+              "label": "50 GB",
+              "value": "50gb",
+              "price": 0
+            },
+            {
+              "label": "100 GB",
+              "value": "100gb",
+              "price": 75
+            },
+            {
+              "label": "200 GB",
+              "value": "200gb",
+              "price": 150
+            }
           ]
         },
         {
           "id": 3,
           "name": "Router Upgrade",
           "options": [
-            { "label": "Standard", "value": "standard", "price": 0 },
-            { "label": "High-Performance", "value": "highperf", "price": 100 }
+            {
+              "label": "Standard",
+              "value": "standard",
+              "price": 0
+            },
+            {
+              "label": "High-Performance",
+              "value": "highperf",
+              "price": 100
+            }
           ]
         },
         {
           "id": 4,
           "name": "Installation Type",
           "options": [
-            { "label": "Self-Installation", "value": "self", "price": 0 },
+            {
+              "label": "Self-Installation",
+              "value": "self",
+              "price": 0
+            },
             {
               "label": "Professional Installation",
               "value": "pro",
@@ -167,24 +275,44 @@
     {
       "id": 1,
       "title": "Basic Calls",
-      "basePrice": 300.0,
+      "basePrice": 300,
       "days": 30,
       "customizationOptions": [
         {
           "id": 1,
           "name": "Call Minutes",
           "options": [
-            { "label": "100 Minutes", "value": "100min", "price": 0 },
-            { "label": "250 Minutes", "value": "250min", "price": 50 },
-            { "label": "Unlimited", "value": "unlimited", "price": 100 }
+            {
+              "label": "100 Minutes",
+              "value": "100min",
+              "price": 0
+            },
+            {
+              "label": "250 Minutes",
+              "value": "250min",
+              "price": 50
+            },
+            {
+              "label": "Unlimited",
+              "value": "unlimited",
+              "price": 100
+            }
           ]
         },
         {
           "id": 2,
           "name": "International Calls",
           "options": [
-            { "label": "Not Included", "value": "not-included", "price": 0 },
-            { "label": "Included", "value": "included", "price": 75 }
+            {
+              "label": "Not Included",
+              "value": "not-included",
+              "price": 0
+            },
+            {
+              "label": "Included",
+              "value": "included",
+              "price": 75
+            }
           ]
         }
       ],
@@ -197,24 +325,44 @@
     {
       "id": 2,
       "title": "Lite Calls",
-      "basePrice": 500.0,
+      "basePrice": 500,
       "days": 30,
       "customizationOptions": [
         {
           "id": 1,
           "name": "Call Minutes",
           "options": [
-            { "label": "100 Minutes", "value": "100min", "price": 0 },
-            { "label": "250 Minutes", "value": "250min", "price": 50 },
-            { "label": "Unlimited", "value": "unlimited", "price": 100 }
+            {
+              "label": "100 Minutes",
+              "value": "100min",
+              "price": 0
+            },
+            {
+              "label": "250 Minutes",
+              "value": "250min",
+              "price": 50
+            },
+            {
+              "label": "Unlimited",
+              "value": "unlimited",
+              "price": 100
+            }
           ]
         },
         {
           "id": 2,
           "name": "International Calls",
           "options": [
-            { "label": "Not Included", "value": "not-included", "price": 0 },
-            { "label": "Included", "value": "included", "price": 75 }
+            {
+              "label": "Not Included",
+              "value": "not-included",
+              "price": 0
+            },
+            {
+              "label": "Included",
+              "value": "included",
+              "price": 75
+            }
           ]
         }
       ],
@@ -223,6 +371,690 @@
         "Free Voicemail Service",
         "Order now and get a free SIM card"
       ]
+    }
+  ],
+  "checkoutHistory": [
+    {
+      "user": "chamu@gmail.com",
+      "items": [
+        {
+          "data": {
+            "id": 1,
+            "title": "Starter",
+            "basePrice": 1090,
+            "customizationOptions": [
+              {
+                "id": 1,
+                "name": "Speed Limit",
+                "options": [
+                  {
+                    "label": "10 Mbps",
+                    "value": "10mbps",
+                    "price": 0
+                  },
+                  {
+                    "label": "20 Mbps",
+                    "value": "20mbps",
+                    "price": 50
+                  },
+                  {
+                    "label": "50 Mbps",
+                    "value": "50mbps",
+                    "price": 100
+                  }
+                ]
+              },
+              {
+                "id": 2,
+                "name": "Add-on Data",
+                "options": [
+                  {
+                    "label": "50 GB",
+                    "value": "50gb",
+                    "price": 0
+                  },
+                  {
+                    "label": "100 GB",
+                    "value": "100gb",
+                    "price": 75
+                  },
+                  {
+                    "label": "200 GB",
+                    "value": "200gb",
+                    "price": 150
+                  }
+                ]
+              },
+              {
+                "id": 3,
+                "name": "Router Upgrade",
+                "options": [
+                  {
+                    "label": "Standard",
+                    "value": "standard",
+                    "price": 0
+                  },
+                  {
+                    "label": "High-Performance",
+                    "value": "highperf",
+                    "price": 100
+                  }
+                ]
+              },
+              {
+                "id": 4,
+                "name": "Installation Type",
+                "options": [
+                  {
+                    "label": "Self-Installation",
+                    "value": "self",
+                    "price": 0
+                  },
+                  {
+                    "label": "Professional Installation",
+                    "value": "pro",
+                    "price": 150
+                  }
+                ]
+              }
+            ]
+          },
+          "type": "data",
+          "customizationOptions": {
+            "1": 50,
+            "2": 75
+          }
+        }
+      ],
+      "total": 1215,
+      "id": 1
+    },
+    {
+      "user": "chamu@gmail.com",
+      "items": [
+        {
+          "data": {
+            "id": 1,
+            "title": "Basic Calls",
+            "basePrice": 300,
+            "customizationOptions": [
+              {
+                "id": 1,
+                "name": "Call Minutes",
+                "options": [
+                  {
+                    "label": "100 Minutes",
+                    "value": "100min",
+                    "price": 0
+                  },
+                  {
+                    "label": "250 Minutes",
+                    "value": "250min",
+                    "price": 50
+                  },
+                  {
+                    "label": "Unlimited",
+                    "value": "unlimited",
+                    "price": 100
+                  }
+                ]
+              },
+              {
+                "id": 2,
+                "name": "International Calls",
+                "options": [
+                  {
+                    "label": "Not Included",
+                    "value": "not-included",
+                    "price": 0
+                  },
+                  {
+                    "label": "Included",
+                    "value": "included",
+                    "price": 75
+                  }
+                ]
+              }
+            ]
+          },
+          "type": "call",
+          "customizationOptions": {
+            "1": 100,
+            "2": 75
+          }
+        }
+      ],
+      "total": 475,
+      "id": 2
+    },
+    {
+      "user": "chamu@gmail.com",
+      "items": [
+        {
+          "data": {
+            "id": 1,
+            "title": "Basic Calls",
+            "basePrice": 300,
+            "customizationOptions": [
+              {
+                "id": 1,
+                "name": "Call Minutes",
+                "options": [
+                  {
+                    "label": "100 Minutes",
+                    "value": "100min",
+                    "price": 0
+                  },
+                  {
+                    "label": "250 Minutes",
+                    "value": "250min",
+                    "price": 50
+                  },
+                  {
+                    "label": "Unlimited",
+                    "value": "unlimited",
+                    "price": 100
+                  }
+                ]
+              },
+              {
+                "id": 2,
+                "name": "International Calls",
+                "options": [
+                  {
+                    "label": "Not Included",
+                    "value": "not-included",
+                    "price": 0
+                  },
+                  {
+                    "label": "Included",
+                    "value": "included",
+                    "price": 75
+                  }
+                ]
+              }
+            ]
+          },
+          "type": "call",
+          "customizationOptions": {
+            "1": 100,
+            "2": 75
+          }
+        }
+      ],
+      "total": 475,
+      "id": 3
+    },
+    {
+      "user": "chamu@gmail.com",
+      "items": [
+        {
+          "data": {
+            "id": 1,
+            "title": "Starter",
+            "basePrice": 1090,
+            "customizationOptions": [
+              {
+                "id": 1,
+                "name": "Speed Limit",
+                "options": [
+                  {
+                    "label": "10 Mbps",
+                    "value": "10mbps",
+                    "price": 0
+                  },
+                  {
+                    "label": "20 Mbps",
+                    "value": "20mbps",
+                    "price": 50
+                  },
+                  {
+                    "label": "50 Mbps",
+                    "value": "50mbps",
+                    "price": 100
+                  }
+                ]
+              },
+              {
+                "id": 2,
+                "name": "Add-on Data",
+                "options": [
+                  {
+                    "label": "50 GB",
+                    "value": "50gb",
+                    "price": 0
+                  },
+                  {
+                    "label": "100 GB",
+                    "value": "100gb",
+                    "price": 75
+                  },
+                  {
+                    "label": "200 GB",
+                    "value": "200gb",
+                    "price": 150
+                  }
+                ]
+              },
+              {
+                "id": 3,
+                "name": "Router Upgrade",
+                "options": [
+                  {
+                    "label": "Standard",
+                    "value": "standard",
+                    "price": 0
+                  },
+                  {
+                    "label": "High-Performance",
+                    "value": "highperf",
+                    "price": 100
+                  }
+                ]
+              },
+              {
+                "id": 4,
+                "name": "Installation Type",
+                "options": [
+                  {
+                    "label": "Self-Installation",
+                    "value": "self",
+                    "price": 0
+                  },
+                  {
+                    "label": "Professional Installation",
+                    "value": "pro",
+                    "price": 150
+                  }
+                ]
+              }
+            ]
+          },
+          "type": "data",
+          "customizationOptions": {
+            "3": 100
+          }
+        }
+      ],
+      "total": 1190,
+      "id": 4
+    },
+    {
+      "user": "chamu@gmail.com",
+      "items": [
+        {
+          "data": {
+            "id": 1,
+            "title": "Starter",
+            "basePrice": 1090,
+            "customizationOptions": [
+              {
+                "id": 1,
+                "name": "Speed Limit",
+                "options": [
+                  {
+                    "label": "10 Mbps",
+                    "value": "10mbps",
+                    "price": 0
+                  },
+                  {
+                    "label": "20 Mbps",
+                    "value": "20mbps",
+                    "price": 50
+                  },
+                  {
+                    "label": "50 Mbps",
+                    "value": "50mbps",
+                    "price": 100
+                  }
+                ]
+              },
+              {
+                "id": 2,
+                "name": "Add-on Data",
+                "options": [
+                  {
+                    "label": "50 GB",
+                    "value": "50gb",
+                    "price": 0
+                  },
+                  {
+                    "label": "100 GB",
+                    "value": "100gb",
+                    "price": 75
+                  },
+                  {
+                    "label": "200 GB",
+                    "value": "200gb",
+                    "price": 150
+                  }
+                ]
+              },
+              {
+                "id": 3,
+                "name": "Router Upgrade",
+                "options": [
+                  {
+                    "label": "Standard",
+                    "value": "standard",
+                    "price": 0
+                  },
+                  {
+                    "label": "High-Performance",
+                    "value": "highperf",
+                    "price": 100
+                  }
+                ]
+              },
+              {
+                "id": 4,
+                "name": "Installation Type",
+                "options": [
+                  {
+                    "label": "Self-Installation",
+                    "value": "self",
+                    "price": 0
+                  },
+                  {
+                    "label": "Professional Installation",
+                    "value": "pro",
+                    "price": 150
+                  }
+                ]
+              }
+            ]
+          },
+          "type": "data",
+          "customizationOptions": {
+            "2": 150
+          }
+        }
+      ],
+      "total": 1240,
+      "id": 5
+    },
+    {
+      "user": "chamu@gmail.com",
+      "items": [
+        {
+          "data": {
+            "id": 1,
+            "title": "Starter",
+            "basePrice": 1090,
+            "customizationOptions": [
+              {
+                "id": 1,
+                "name": "Speed Limit",
+                "options": [
+                  {
+                    "label": "10 Mbps",
+                    "value": "10mbps",
+                    "price": 0
+                  },
+                  {
+                    "label": "20 Mbps",
+                    "value": "20mbps",
+                    "price": 50
+                  },
+                  {
+                    "label": "50 Mbps",
+                    "value": "50mbps",
+                    "price": 100
+                  }
+                ]
+              },
+              {
+                "id": 2,
+                "name": "Add-on Data",
+                "options": [
+                  {
+                    "label": "50 GB",
+                    "value": "50gb",
+                    "price": 0
+                  },
+                  {
+                    "label": "100 GB",
+                    "value": "100gb",
+                    "price": 75
+                  },
+                  {
+                    "label": "200 GB",
+                    "value": "200gb",
+                    "price": 150
+                  }
+                ]
+              },
+              {
+                "id": 3,
+                "name": "Router Upgrade",
+                "options": [
+                  {
+                    "label": "Standard",
+                    "value": "standard",
+                    "price": 0
+                  },
+                  {
+                    "label": "High-Performance",
+                    "value": "highperf",
+                    "price": 100
+                  }
+                ]
+              },
+              {
+                "id": 4,
+                "name": "Installation Type",
+                "options": [
+                  {
+                    "label": "Self-Installation",
+                    "value": "self",
+                    "price": 0
+                  },
+                  {
+                    "label": "Professional Installation",
+                    "value": "pro",
+                    "price": 150
+                  }
+                ]
+              }
+            ]
+          },
+          "type": "data",
+          "customizationOptions": {
+            "2": 150
+          }
+        }
+      ],
+      "total": 1240,
+      "id": 6
+    },
+    {
+      "user": "chamu@gmail.com",
+      "items": [
+        {
+          "data": {
+            "id": 1,
+            "title": "Starter",
+            "basePrice": 1090,
+            "customizationOptions": [
+              {
+                "id": 1,
+                "name": "Speed Limit",
+                "options": [
+                  {
+                    "label": "10 Mbps",
+                    "value": "10mbps",
+                    "price": 0
+                  },
+                  {
+                    "label": "20 Mbps",
+                    "value": "20mbps",
+                    "price": 50
+                  },
+                  {
+                    "label": "50 Mbps",
+                    "value": "50mbps",
+                    "price": 100
+                  }
+                ]
+              },
+              {
+                "id": 2,
+                "name": "Add-on Data",
+                "options": [
+                  {
+                    "label": "50 GB",
+                    "value": "50gb",
+                    "price": 0
+                  },
+                  {
+                    "label": "100 GB",
+                    "value": "100gb",
+                    "price": 75
+                  },
+                  {
+                    "label": "200 GB",
+                    "value": "200gb",
+                    "price": 150
+                  }
+                ]
+              },
+              {
+                "id": 3,
+                "name": "Router Upgrade",
+                "options": [
+                  {
+                    "label": "Standard",
+                    "value": "standard",
+                    "price": 0
+                  },
+                  {
+                    "label": "High-Performance",
+                    "value": "highperf",
+                    "price": 100
+                  }
+                ]
+              },
+              {
+                "id": 4,
+                "name": "Installation Type",
+                "options": [
+                  {
+                    "label": "Self-Installation",
+                    "value": "self",
+                    "price": 0
+                  },
+                  {
+                    "label": "Professional Installation",
+                    "value": "pro",
+                    "price": 150
+                  }
+                ]
+              }
+            ]
+          },
+          "type": "data",
+          "customizationOptions": {
+            "1": 100,
+            "3": 0
+          }
+        }
+      ],
+      "total": 1190,
+      "id": 7
+    },
+    {
+      "user": "chamu@gmail.com",
+      "items": [
+        {
+          "data": {
+            "id": 1,
+            "title": "Starter",
+            "basePrice": 1090,
+            "customizationOptions": [
+              {
+                "id": 1,
+                "name": "Speed Limit",
+                "options": [
+                  {
+                    "label": "10 Mbps",
+                    "value": "10mbps",
+                    "price": 0
+                  },
+                  {
+                    "label": "20 Mbps",
+                    "value": "20mbps",
+                    "price": 50
+                  },
+                  {
+                    "label": "50 Mbps",
+                    "value": "50mbps",
+                    "price": 100
+                  }
+                ]
+              },
+              {
+                "id": 2,
+                "name": "Add-on Data",
+                "options": [
+                  {
+                    "label": "50 GB",
+                    "value": "50gb",
+                    "price": 0
+                  },
+                  {
+                    "label": "100 GB",
+                    "value": "100gb",
+                    "price": 75
+                  },
+                  {
+                    "label": "200 GB",
+                    "value": "200gb",
+                    "price": 150
+                  }
+                ]
+              },
+              {
+                "id": 3,
+                "name": "Router Upgrade",
+                "options": [
+                  {
+                    "label": "Standard",
+                    "value": "standard",
+                    "price": 0
+                  },
+                  {
+                    "label": "High-Performance",
+                    "value": "highperf",
+                    "price": 100
+                  }
+                ]
+              },
+              {
+                "id": 4,
+                "name": "Installation Type",
+                "options": [
+                  {
+                    "label": "Self-Installation",
+                    "value": "self",
+                    "price": 0
+                  },
+                  {
+                    "label": "Professional Installation",
+                    "value": "pro",
+                    "price": 150
+                  }
+                ]
+              }
+            ]
+          },
+          "type": "data",
+          "customizationOptions": {
+            "3": 100
+          }
+        }
+      ],
+      "total": 1190,
+      "id": 8
     }
   ]
 }

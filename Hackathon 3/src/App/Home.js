@@ -44,7 +44,7 @@ function a11yProps(index) {
 
 export const Home = () => {
   const [value, setValue] = React.useState(0);
-  const [cartItems, setCartItems] = useState([]); // State to hold cart items
+  const [cartItems, setCartItems] = useState([]);
 
   const handleAddToOrder = (item) => {
     setCartItems((prevCartItems) => [...prevCartItems, item]);
@@ -53,6 +53,10 @@ export const Home = () => {
   const handleRemoveFromCart = (index) => {
     const newCartItems = cartItems.filter((_, i) => i !== index);
     setCartItems(newCartItems);
+  };
+
+  const handleClearCart = () => {
+    setCartItems([]);
   };
 
   useEffect(() => {
@@ -85,7 +89,7 @@ export const Home = () => {
             />
             <Tab
               sx={{ textTransform: "none", fontWeight: "bold" }}
-              label="Cart"
+              label="Order"
               {...a11yProps(2)}
             />
           </Tabs>
@@ -97,7 +101,11 @@ export const Home = () => {
           <CallPlans addToOrder={handleAddToOrder} />
         </CustomTabPanel>
         <CustomTabPanel value={value} index={2}>
-          <Cart cartItems={cartItems} removeCartItem={handleRemoveFromCart} />
+          <Cart
+            cartItems={cartItems}
+            removeCartItem={handleRemoveFromCart}
+            clearCartItems={handleClearCart}
+          />
         </CustomTabPanel>
       </Box>
     </div>
