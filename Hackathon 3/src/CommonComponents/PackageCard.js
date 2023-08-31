@@ -33,7 +33,7 @@ const Item = styled(Paper)(({ theme }) => ({
 }));
 
 const StyledTitleBox = styled(Box)(({ theme }) => ({
-  backgroundColor: "#1E90FF",
+  backgroundColor: "#094087",
   color: "white",
   padding: theme.spacing(1),
   borderRadius: "8px",
@@ -88,17 +88,29 @@ export const PackageCard = ({ type, data, onAddToOrder }) => {
   };
 
   return (
-    <Item>
+    <Box
+      p={3}
+      boxShadow={2}
+      borderRadius={8}
+      bgcolor="#f8f8f8"
+      sx={{
+        textAlign: "center",
+        ":hover": {
+          transform: "scale(1.04)",
+          cursor: "pointer",
+        },
+      }}
+    >
       <Box
         display="flex"
         flexDirection="column"
         alignItems="center"
-        bgcolor="#EAF6FF"
+        bgcolor="#e8e8e8"
         borderRadius={8}
         p={1}
       >
         <Box
-          bgcolor="#1E90FF"
+          bgcolor="#094087"
           color="white"
           width="100%"
           textAlign="center"
@@ -240,6 +252,6 @@ export const PackageCard = ({ type, data, onAddToOrder }) => {
           </Button>
         </DialogActions>
       </Dialog>
-    </Item>
+    </Box>
   );
 };
