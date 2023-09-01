@@ -44,8 +44,8 @@ const FAQSection = () => {
 
   return (
     <div className="faq-section">
-      <h2>Frequently Asked Questions</h2>
       <div className="faq-content">
+      <h2>Frequently Asked Questions</h2>
         <ul className="faq-list">
           {faqs.map((faq, index) => (
             <li key={index}>
@@ -59,9 +59,9 @@ const FAQSection = () => {
             </li>
           ))}
         </ul>
+        <ContactForm />
       </div>
       <div className="faq-side-panel">
-        <ContactForm />
         <ChatSystem />
       </div>
     </div>

@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
+import { TextField, Button } from '@mui/material';
 import './ChatSystem.css';
+
 const ChatSystem = () => {
   const [messages, setMessages] = useState([]);
   const [newMessage, setNewMessage] = useState('');
@@ -25,9 +27,14 @@ const ChatSystem = () => {
     }
     else if (userMessage.includes('hi') || userMessage.includes('hello')) {
       supportResponse = 'Hello! How can I assist you today?';
-    } else if (userMessage.includes('network') || userMessage.includes('not working')) {
+    }
+    else if (userMessage.includes('sim') || userMessage.includes('working')) {
+        supportResponse = 'If your sim is not working do try to remove and insert again';
+    } 
+     else if (userMessage.includes('network') || userMessage.includes('not working')) {
       supportResponse = 'You can try restarting your phone or contacting customer care.';
     }
+    
 
     setMessages([...messages, { text: newMessage, user: 'user' }, { text: supportResponse, user: 'support' }]);
   };
@@ -40,6 +47,7 @@ const ChatSystem = () => {
 
   return (
     <div className="telecom-chat">
+        <h3>Help/Support</h3>
       <div className="chat-messages">
         {messages.map((message, index) => (
           <div key={index} className={`message ${message.user}`}>
@@ -48,14 +56,16 @@ const ChatSystem = () => {
         ))}
       </div>
       <div className="input-area">
-        <input
+        <TextField
           type="text"
           value={newMessage}
           onChange={(e) => setNewMessage(e.target.value)}
           onKeyPress={handleKeyPress}
           placeholder="Type your message..."
         />
-        <button onClick={handleSendMessage} className="btn btn-success">Send</button>
+        <Button onClick={handleSendMessage} variant="contained" color="success">
+          Send
+        </Button>
       </div>
     </div>
   );
