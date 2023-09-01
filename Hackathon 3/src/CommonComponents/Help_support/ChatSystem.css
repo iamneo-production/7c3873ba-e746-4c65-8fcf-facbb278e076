@@ -1,0 +1,48 @@
+/* TelecomChat.css */
+
+.telecom-chat {
+    border: 1px solid #ee7d7d;
+    border-radius: 5px;
+    overflow: hidden;
+    width: 300px;
+    margin: 20px auto;
+  }
+  
+  .chat-messages {
+    padding: 10px;
+    max-height: 300px;
+    overflow-y: scroll;
+  }
+  
+  .message {
+    padding: 5px 10px;
+    margin: 5px;
+    border-radius: 5px;
+    word-wrap: break-word;
+  }
+  
+  .user {
+    background-color: #e6f7ff;
+  }
+  
+  .support {
+    background-color: #f0f0f0;
+  }
+  
+  .input-area {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+  }
+  
+  .input-area input {
+    flex-grow: 1;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .input-area button {
+    margin-left: 10px;
+  }
+  
