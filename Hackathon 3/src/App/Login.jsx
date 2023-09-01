@@ -10,7 +10,7 @@ import { toast } from "react-toastify";
 
 import * as Yup from "yup";
 import { Link, useNavigate } from "react-router-dom";
-import { CheckLogin } from "./../Services/http.service";
+import { CheckLogin } from "../Services/http.service";
 import { useMediaQuery } from "@mui/material";
 
 import TtyIcon from "@mui/icons-material/Tty";

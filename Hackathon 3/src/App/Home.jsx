@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Header } from "./../CommonComponents/Header";
+import { Header } from "../CommonComponents/Header";
 import { Box, Tab, Tabs } from "@mui/material";
 import { Typography } from "@mui/material";
 import { DataPlans } from "../CommonComponents/DataPlans";
