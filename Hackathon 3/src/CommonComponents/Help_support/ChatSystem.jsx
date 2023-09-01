@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import './ChatSystem.css';
-import 'bootstrap/dist/css/bootstrap.min.css'; 
 const ChatSystem = () => {
   const [messages, setMessages] = useState([]);
   const [newMessage, setNewMessage] = useState('');

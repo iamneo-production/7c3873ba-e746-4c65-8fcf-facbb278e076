@@ -6,7 +6,7 @@ import ProtectUser from "./ProtectRoute/ProtectUser";
 import { PurchasedOrderList } from "../App/PurchasedOrderList";
 import { Home } from "./../App/Home";
 import Register from "../App/Register";
-import FAQSection from "../App/CommonComponents/Help_support/FAQSection";
+import FAQSection from "../CommonComponents/Help_support/FAQSection";
 
 export const AllRoutes = () => {
   return (
